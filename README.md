@@ -1,4 +1,4 @@
-# ML Pipeline Placement System
+# MLOpX
 The increasing demand for ML solutions has underscored the need for methods that accelerate both model development and deployment. MLOps has emerged as a response to this need by automating and streamlining the entire ML lifecycle, with ML pipelines playing a central role. Since the computational requirements of pipeline tasks can vary significantly, the use of heterogeneous computing environments has become essential for efficient execution. However, existing MLOps platforms are incapable of making well-founded placement decisions in such environments, often leading to suboptimal task allocation and reduced efficiency.
 
 Given the limitations of current MLOps platforms, this repository provides an end-to-end solution for optimising the execution of ML pipelines in heterogeneous environments. With this solution, the goal is not to replace existing platforms, but rather to enhance them by providing scheduling and placement capabilities, which are currently lacking.
