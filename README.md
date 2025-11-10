@@ -1,6 +1,6 @@
 # MLOpX
 
-MLOpX is an end-to-end solution for optimising the execution of Machine Learning (ML) pipelines in heterogeneous computing environments. It allows users to define their own ML pipelines using a **platform-agnostic library** and features a customizable **placement system** that schedules and places each pipeline's tasks on the available nodes in a Kubernetes cluster.
+MLOpX is an end-to-end solution for optimizing the execution of Machine Learning (ML) pipelines in heterogeneous computing environments. It allows users to define their own ML pipelines using a **platform-agnostic library** and features a customizable **placement system** that schedules and places each pipeline's tasks on the available nodes in a Kubernetes cluster.
 
 ## MLOpX Goals
 
@@ -23,7 +23,7 @@ As can be seen in the figure below, MLOpX is composed of two main modules that w
 - **Pipeline definition library (green box)**: Platform-agnostic library to define ML pipelines.
 - **Placement system (red box)**: System that listens for pipeline submissions, schedules them, places their tasks on available nodes in a cluster, and triggers their execution.
 
-The placement system is intended to be deployed alongside an existing MLOps platform to handle the scheduling and placement of the submitted pipelines.
+The placement system is intended to be deployed alongside an existing MLOps platform and interacts with it through its API to manage the execution of the pipelines.
 
 <img src="images/architecture.png" alt="architecture"/>
 
@@ -41,7 +41,7 @@ To learn more about how the different components interact with each other whenev
 ├── pipelines/            # Examples of pipeline definitions using the library
 ├── data/                 # Datasets used in the pipeline examples
 ├── images/               # Auxiliary images for the README file
-├── results/              # Scripts and notebooks to analyse performance results
+├── results/              # Scripts and notebooks to analyze performance results
 ├── utils/                # Utility scripts to upload datasets to a NFS server
 └── README.md             # This file
 ```
@@ -90,7 +90,7 @@ The system manages the execution of the pipelines by monitoring their status thr
 Although the placement system interacts with the Kubernetes cluster through its API and the Prometheus server to gather node details and metrics, it is essential to define a few labels on the cluster nodes so that the placement system can make informed placement decisions.
 
 The required labels are as follows:
-- `worker_type`: Defines the type of the node acording to its hardware capabilities (e.g., `low`, `medium`, `high`).
+- `worker_type`: Defines the type of the node according to its hardware capabilities (e.g., `low`, `medium`, `high`).
 - `accelerator_type`: Defines the type of accelerator available on the node (`none` or `gpu`).
 - `n_cpu_flags`: Defines the number of CPU flags supported by the node CPU (important for certain ML tasks optimizations).
 
