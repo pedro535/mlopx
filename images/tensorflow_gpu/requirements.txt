@@ -1,7 +1,0 @@
-numpy
-pandas
-joblib
-scikit-learn
-imbalanced-learn
-tensorflow[and-cuda]
-keras
