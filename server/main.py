@@ -77,8 +77,7 @@ async def submit_pipeline(
     pipeline: UploadFile = File(...),
     metadata: UploadFile = File(...)
 ):
-    # pipeline_id = str(uuid.uuid3())
-    pipeline_id = "2864981c-2bdd-47e5-863e-4a185c6e2dcc"
+    pipeline_id = str(uuid.uuid3())
     path = pipelines_dir / pipeline_id
     path.mkdir(parents=True, exist_ok=True)
     
@@ -114,6 +113,4 @@ async def submit_pipeline(
     return response
 
 
-print(chr(27) + "[2J")
-print(chr(27) + "[H")
 print("Pipeline placement system is running...\n")
